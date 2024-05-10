@@ -4,33 +4,14 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-//import lombok.Data;
+import lombok.Data;
 
 @Entity
-//@Data
-public class Categoria 
-{
-    @GeneratedValue(strategy=GenerationType.AUTO)
-    @Id
-    private long id;
+@Data
+public class Categoria {
+    @Id 
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
     private String name;
-    public long getId() {
-        return id;
-    }
-    public void setId(long id) {
-        this.id = id;
-    }
-    public String getName() {
-        return name;
-    }
-    public void setName(String name) {
-        this.name = name;
-    }
-    public String getEnable() {
-        return enable;
-    }
-    public void setEnable(String enable) {
-        this.enable = enable;
-    }
-    private String enable;
-};
+    private Boolean enable;
+}

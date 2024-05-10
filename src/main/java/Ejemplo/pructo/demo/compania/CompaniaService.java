@@ -15,21 +15,21 @@ public class CompaniaService {
     }
 
     //metodo select by id
-   
+
     public Compania findById(Long id)
     {
         return companiaRepository.findById(id).orElse(null);
     }
 
    //metodo delete
-   public void deleteById(Long id)
-   {
+    public void deleteById(Long id)
+    {
         companiaRepository.deleteById(id);
-   }
+    }
 
    //metodo select all
-   public List<Compania> findAll()
-   {
-    return companiaRepository.findAll();
-   }
+    public List<Compania> findAll()
+    {
+        return companiaRepository.findAll();
     }
+}

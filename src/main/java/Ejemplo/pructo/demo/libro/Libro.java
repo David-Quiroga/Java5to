@@ -14,13 +14,13 @@ import jakarta.persistence.ManyToOne;
 //@Data
 
 public class Libro {
-    @GeneratedValue(strategy=GenerationType.AUTO)
-    @Id
-    private long id;
-    private String title;
+    @Id 
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
+    private String titulo;
     private int pages;
     private Date created;
-
+    
     public long getId() {
         return id;
     }
@@ -30,11 +30,11 @@ public class Libro {
     }
 
     public String getTitle() {
-        return title;
+        return titulo;
     }
 
     public void setTitle(String title) {
-        this.title = title;
+        this.titulo = title;
     }
 
     public int getPages() {
@@ -60,7 +60,6 @@ public class Libro {
     public void setCategoria(Categoria categoria) {
         this.categoria = categoria;
     }
-
-    @ManyToOne
+    @ManyToOne 
     private Categoria categoria;
-};
+}
